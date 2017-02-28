@@ -291,8 +291,9 @@ img {
   text-align: center; }
 
 .main_link {
+	position: relative;
   display: inline-block;
-  position: relative;
+  
   text-align: center;
   padding: 10px 30px;
   -webkit-border-radius: 7px;
