@@ -121,6 +121,22 @@
     }
     }
 
+    .item-folioPainer{
+    position: absolute;
+    top:0;
+    left:0;
+        background-image: url('../img_index/screenPortfolio.jpg');
+    width: 100%;
+    height: 1200px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    transition: all 8s;
+    &:hover{
+        top:-700px;
+    }
+    }
+
 
 .title_main{
 	text-align: center;
