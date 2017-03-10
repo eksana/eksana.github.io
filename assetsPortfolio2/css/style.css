@@ -17,6 +17,7 @@ body {
 img {
 	max-width: 100%;
 	height: auto;
+	width:100%;
 }
 
 a {
@@ -28,6 +29,10 @@ a:hover {
 	color: #999;
 }
 
+.folio{
+	width:400px;
+	height:300px;
+}
 /* ---------------------------------------------- /*
  * Transition elsements
 /* ---------------------------------------------- */
@@ -295,7 +300,7 @@ textarea.form-control {
     text-align: center;
 }
 .calltoaction {
-    background: url(../images/item-3.jpg);
+    background: url(../images/bgHall.jpg);
 	background-color: #222;
 	background-repeat: no-repeat;
 	background-position: 0 0;
@@ -343,7 +348,7 @@ textarea.form-control {
 /* ---------------------------------------------- */
 
 #home {
-	background: url(../images/cover.jpg);
+	background: url(../images/bgHall.jpg);
 	background-color: #222;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -353,7 +358,9 @@ textarea.form-control {
 		 -o-background-size: cover;
 			background-size: cover;
 	padding: 0;
+	position:relative;
 }
+
 
 .home-overlay {
     background-color: rgba(44, 62, 80, 0.3);
@@ -459,7 +466,9 @@ textarea.form-control {
 /* ---------------------------------------------- */
 
 #footer {
-	background: #222;
+	background:#222 url(../images/bgFooter2.jpg) no-repeat center center;
+	background-size:cover;
+	/*background: #222;*/
 	text-align: center;
 	padding: 40px 0;
 	color: #FFF;
@@ -804,6 +813,7 @@ textarea.form-control {
 
 figure.effect-bubba {
 	background: #9e5406;
+	width:100%;
 }
 
 figure.effect-bubba img {
