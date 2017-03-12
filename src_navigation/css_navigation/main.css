@@ -26,7 +26,8 @@
 
 .main-a {
   padding: 20px 8px;
-  color: white; }
+  color: white;
+  font-size: 24px; }
 
 .cross {
   position: absolute;
