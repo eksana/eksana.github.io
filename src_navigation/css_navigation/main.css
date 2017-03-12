@@ -4,7 +4,8 @@
   background-color: white; }
 
 .main-nav {
-  background-color: rgba(179, 255, 218, 0.7);
+  /*background-color: rgba(179, 255, 218, 0.7);*/
+  background-color:rgba(179, 198, 255);
   padding: 20px;
   position: relative; }
 
@@ -22,7 +23,8 @@
   background-color: #9999ff;
   list-style-type: none; }
   .main-li:hover {
-    background-color: #6666ff; }
+   /* background-color: #6666ff;*/ 
+  background-color:#6699ff}
 
 .main-a {
   padding: 20px 8px;
