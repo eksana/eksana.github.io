@@ -25,6 +25,23 @@
   list-style-type: none; }
   .main-li:hover {
     background-color: #6666ff; }
+	.change {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  /*display: none;*/ }
+  .main-li {
+  width: 100%;
+  /*display: block;*/
+  display: none;
+  padding: 30px 20px;
+  margin-top: 10px;
+  -webkit-border-radius: 7px;
+          border-radius: 7px;
+  background-color: #9999ff;
+  list-style-type: none; }
+  .main-li:hover {
+    background-color: #6666ff; }
 .active {
   background-color: #6666ff; }
 .main-a {
