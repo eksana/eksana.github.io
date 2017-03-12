@@ -1,0 +1,61 @@
+.wrapNav {
+  width: 100%;
+  padding: 30px;
+  background-color: white; }
+
+.main-nav {
+  background-color: rgba(179, 255, 218, 0.7);
+  padding: 20px;
+  position: relative; }
+
+.ul-main {
+  padding: 0;
+  margin: 0; }
+
+.main-li {
+  width: 100%;
+  display: block;
+  padding: 30px 20px;
+  margin-top: 10px;
+  -webkit-border-radius: 7px;
+          border-radius: 7px;
+  background-color: #9999ff;
+  list-style-type: none; }
+  .main-li:hover {
+    background-color: #6666ff; }
+
+.main-a {
+  padding: 20px 8px;
+  color: white; }
+
+.cross {
+  position: absolute;
+  top: 0;
+  right: 30px; }
+
+.menu.icon {
+  color: #000;
+  position: absolute;
+  margin-left: 2px;
+  margin-top: 10px;
+  width: 17px;
+  height: 1px;
+  background-color: currentColor; }
+
+.menu.icon:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 17px;
+  height: 1px;
+  background-color: currentColor; }
+
+.menu.icon:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 17px;
+  height: 1px;
+  background-color: currentColor; }
