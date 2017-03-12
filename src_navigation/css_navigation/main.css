@@ -25,7 +25,8 @@
   list-style-type: none; }
   .main-li:hover {
     background-color: #6666ff; }
-
+.active {
+  background-color: #6666ff; }
 .main-a {
   padding: 20px 8px;
   color: white;
