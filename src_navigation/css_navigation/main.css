@@ -4,8 +4,7 @@
   background-color: white; }
 
 .main-nav {
-  /*background-color: rgba(179, 255, 218, 0.7);*/
-  background-color:rgba(179, 198, 255);
+  background-color: rgba(179, 255, 218, 0.7);
   padding: 20px;
   position: relative; }
 
@@ -23,8 +22,7 @@
   background-color: #9999ff;
   list-style-type: none; }
   .main-li:hover {
-   /* background-color: #6666ff;*/ 
-  background-color:#6699ff}
+    background-color: #6666ff; }
 
 .main-a {
   padding: 20px 8px;
@@ -43,7 +41,7 @@
   margin-top: 10px;
   width: 17px;
   height: 1px;
-  background-color: currentColor; }
+  background-color: #ff6600; }
 
 .menu.icon:before {
   content: '';
@@ -52,7 +50,7 @@
   left: 0;
   width: 17px;
   height: 1px;
-  background-color: currentColor; }
+  background-color: #ff6600; }
 
 .menu.icon:after {
   content: '';
@@ -61,4 +59,4 @@
   left: 0;
   width: 17px;
   height: 1px;
-  background-color: currentColor; }
+  background-color: #ff6600; }
