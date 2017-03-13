@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('.cross').click(function(){
+	$('.cross, .change').click(function(){
 		$('.main-li').toggle('slow');
 		//$('.change').toggle();
 
