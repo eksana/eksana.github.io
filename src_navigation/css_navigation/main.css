@@ -1,4 +1,7 @@
+/*rgb(0, 102, 102);*/
 /*$colorNav:rgba(179, 255, 218, .7);*/
+/*rgba(121, 134, 134, .6);*/
+/*rgb(0, 153, 153);*/
 .wrapNav {
   position: relative;
   width: 100%;
@@ -8,7 +11,9 @@
 .main-nav {
   background-color: rgba(0, 102, 102, 0.5);
   padding: 20px;
-  position: relative; }
+  position: relative;
+  -webkit-border-radius: 10px;
+          border-radius: 10px; }
 
 .ul-main {
   padding: 0;
@@ -24,13 +29,19 @@
   background-color: #9999ff;
   list-style-type: none; }
   .main-li:hover {
+    /*background-color: lighten(blue,20%);*/
     background-color: #6666ff; }
-	.change {
+
+.change {
   color: #fff;
   font-size: 30px;
   text-align: center;
-  /*display: none;*/ }
-  .main-li {
+  /*display: none;*/
+  text-transform: uppercase; }
+  .change:hover {
+    cursor: pointer; }
+
+.main-li {
   width: 100%;
   /*display: block;*/
   display: none;
@@ -41,9 +52,15 @@
   background-color: #9999ff;
   list-style-type: none; }
   .main-li:hover {
+    /*background-color: lighten(blue,20%);*/
     background-color: #6666ff; }
+
+.nn {
+  display: none; }
+
 .active {
   background-color: #6666ff; }
+
 .main-a {
   padding: 20px 8px;
   color: white;
@@ -61,6 +78,9 @@
   background-color: red;
   background-color: #ffa366;
   /*display: none;*/ }
+  .cross:hover {
+    background-color: #ffc299;
+    cursor: pointer; }
 
 .menu.icon {
   color: #000;
