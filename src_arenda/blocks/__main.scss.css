@@ -1,20 +1,25 @@
 .innerDescription{
-	padding-left:50%;
+	/*padding-left:50%;*/
 	padding-top:20px;
 	padding-bottom: 20px;
-background: url('../img/konstantin.jpg')no-repeat left;
 	border-radius:7px;
-	background-color: $color5;
+	margin-left:-30px;
+	text-align: center;
 	
 	
+}
+.wrapForinnerFoto {
+    text-align: center;
 }
 .fotoMain{
 	width: 100%;
 	
 }
 .innerFoto{
-	display: block;
-	width: 100%;
+	display: inline-block;
+	/*width: 100%;*/
+	width: 178px;
+	height: auto;
 	
 }
 /*.wrapForinnerFoto{
@@ -30,4 +35,12 @@ li{
 .mainDescr{
 	text-align: center;
 	font-size: 34px;
+}
+.mask{
+  
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.for_logo_tel-foot{
+	background-color: $colorTiff4;
 }
