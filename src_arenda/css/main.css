@@ -285,11 +285,17 @@ a {
   .addr {
     margin-top: -50px; } }
 
-@media screen and (max-width: 700px) {
+/*@media screen and (max-width: 700px) {
   .addr {
     margin-top: 10px; }
   .for_logo_tel {
-    text-align: center; } }
+    text-align: center; } }*/
+@media screen and (max-width: 770px){
+
+.addr {
+    margin-top: -50px;
+    text-align: left;
+	margin-left: 50px;}}
 
 .innerDescription {
   /*padding-left:50%;*/
