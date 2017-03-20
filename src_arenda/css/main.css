@@ -347,17 +347,20 @@ table {
 
 /* Черно-белые полоски */
 tr:nth-of-type(odd) {
-  background: #eee; }
+  background-color: #cbe2ed; }
+
+tr:nth-of-type(even) {
+  background-color: #cbe2ed; }
 
 th {
-  background: #333;
+  background-color: #086897;
   color: white;
   font-weight: bold; }
 
 td, th {
   padding: 6px;
-  border: 1px solid #ccc;
-  text-align: left; }
+  border: 1px solid #fff;
+  text-align: center; }
 
 @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
   /* Заставьте таблицу больше не вести себя как таблица */
@@ -369,11 +372,11 @@ td, th {
     top: -9999px;
     left: -9999px; }
   tr {
-    border: 1px solid #ccc; }
+    border: 1px solid #fff; }
   td {
     /* Поведение как у «строки» */
     border: none;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #fff;
     position: relative;
     padding-left: 50%; }
   td:before {
@@ -383,33 +386,109 @@ td, th {
     top: 6px;
     left: 6px;
     width: 45%;
-    padding-right: 10px;
-    white-space: nowrap; }
+    padding-right: 10px; }
   /*
-39.
+
 Пометьте данные
 
 */
   td:nth-of-type(1):before {
-    content: "БЕЗ ПОСРЕДНИКОВ"; }
+    content: "Без посредников";
+    word-wrap: break-word;
+    text-transform: uppercase;
+    
+    background-color: #086897;
+    color: #fff;
+    height: 53px;
+    top: 2px;
+    left: -3px;
+    padding-left: 20px;
+    padding-top: 15px; }
   td:nth-of-type(2):before {
-    content: "май"; }
+    content: "май";
+    background-color: #086897;
+    color: #fff;
+    height: 53px;
+    top: 2px;
+    left: -3px;
+    padding-left: 20px;
+    padding-top: 15px; }
   td:nth-of-type(3):before {
-    content: "с 19.05"; }
+    content: "с 19.05";
+    background-color: #086897;
+    color: #fff;
+    height: 53px;
+    top: 2px;
+    left: -3px;
+    padding-left: 20px;
+    padding-top: 15px; }
   td:nth-of-type(4):before {
-    content: "июнь"; }
+    content: "июнь";
+    background-color: #086897;
+    color: #fff;
+    height: 53px;
+    top: 2px;
+    left: -3px;
+    padding-left: 20px;
+    padding-top: 15px; }
   td:nth-of-type(5):before {
-    content: "с 09.06 по 01.07"; }
+    content: "с 09.06 по 01.07";
+    background-color: #086897;
+    color: #fff;
+    height: 53px;
+    top: 2px;
+    left: -3px;
+    padding-left: 20px;
+    padding-top: 15px; }
   td:nth-of-type(6):before {
-    content: "июль"; }
+    content: "июль";
+    background-color: #086897;
+    color: #fff;
+    height: 53px;
+    top: 2px;
+    left: -3px;
+    padding-left: 20px;
+    padding-top: 15px; }
   td:nth-of-type(7):before {
-    content: "август"; }
+    content: "август";
+    background-color: #086897;
+    color: #fff;
+    height: 53px;
+    top: 2px;
+    left: -3px;
+    padding-left: 20px;
+    padding-top: 15px; }
   td:nth-of-type(8):before {
-    content: "сентябрь"; }
+    content: "сентябрь";
+    background-color: #086897;
+    color: #fff;
+    height: 53px;
+    top: 2px;
+    left: -3px;
+    padding-left: 20px;
+    padding-top: 15px; }
   td:nth-of-type(9):before {
-    content: "c 11.09"; }
+    content: "c 11.09";
+    background-color: #086897;
+    color: #fff;
+    height: 53px;
+    top: 2px;
+    left: -3px;
+    padding-left: 20px;
+    padding-top: 15px; }
   td:nth-of-type(10):before {
-    content: "октябрь"; } }
+    content: "октябрь";
+    background-color: #086897;
+    color: #fff;
+    height: 53px;
+    top: 2px;
+    left: -3px;
+    padding-left: 20px;
+    padding-top: 15px; }
+  tr:nth-of-type(even) {
+    background-color: #cbe2ed; }
+  tr:nth-of-type(odd) {
+    background-color: #cbe2ed; } }
 
 .foot-a {
   padding: 10px;
