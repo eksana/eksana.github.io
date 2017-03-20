@@ -439,7 +439,7 @@ td, th {
     top: 2px;
     left: -3px;
     padding-left: 20px;
-    padding-top: 15px; }
+    padding-top: 12px; }
   td:nth-of-type(6):before {
     content: "июль";
     background-color: #086897;
