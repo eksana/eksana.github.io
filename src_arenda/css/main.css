@@ -396,7 +396,7 @@ td, th {
     content: "Без посредников";
     word-wrap: break-word;
     text-transform: uppercase;
-    
+    font-size:12px;
     background-color: #086897;
     color: #fff;
     height: 53px;
