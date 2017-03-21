@@ -589,7 +589,7 @@ td, th {
     background-color: #cbe2ed; } }
 /*button start*/
 .sub-menu-button {
-  width: 206px;
+  
   line-height: 36px;
   background: #57beff;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, RGB(49, 237, 225)), to(#006999));
