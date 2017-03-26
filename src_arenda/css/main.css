@@ -474,10 +474,13 @@ li {
   display: inline-block;
   background-color: #086897;
   color: #fff;
-  width: 100%; }
+  width: 100%; 
+  margin-top: -3px; }
 
 .descr {
-  border: 1px solid #086897; }
+  border: 1px solid #086897; 
+   margin: -8px 0; }
+
 
 .aboutShip {
   margin-bottom: 10px; }
