@@ -466,7 +466,8 @@ li {
 .mainDescr {
   width: 100%;
   text-align: center;
-  font-size: 34px; }
+  font-size: 34px;
+  font-size: 2.125rem; }
 
 .underDescr {
   text-align: center;
@@ -553,7 +554,10 @@ a {
     line-height: 1.1; }
   .fix {
     width: 187px;
-    height: 169px; } }
+    height: 169px; }
+ .mainDescr {
+    line-height: 1.1;
+    font-size: 28px; } 	}
 
 table {
   width: 100%;
