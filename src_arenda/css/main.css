@@ -170,14 +170,7 @@ p{
   background-color: rgba(0, 87, 128, 0.7); }
 
 @media only screen and (max-width: 500px) {
-  /*.main-nav{
-		display: none;
-	}
-	.cross{
-		display: block;
-		top:100px;
-		left: 45%;
-	}*/
+  
   .main-a {
     /*font-size: 18px;*/
     font-size: 18px;
@@ -283,119 +276,8 @@ a {
   .top-logo {
     float: none; } }
 
-/*@media screen and (max-width: 985px){
-.for_logo_tel{
-	text-align: left;
-}
-.addr{
-	margin-top: -50px;
-}
-
-}
-
-@media screen and (max-width: 769px){
-	.addr{
-	margin-top:10px;
-}
-.for_logo_tel{
-	text-align: center;
-}
 
 
-}*/
-/* start second menu*/
-#cssmenu {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
-  font-size: 14px;
-  line-height: 15px;
-  text-transform: uppercase;
-  text-align: left; }
-
-#cssmenu > ul {
-  width: 80%;
-  list-style-type: none;
-  padding: 30px 0;
-  margin: 0;
-  background: #e1eaf1;
-  border: 1px solid #ece6e8;
-  -webkit-border-radius: 10px;
-          border-radius: 10px;
-  /* закругление углов для всех, кто понимает */
-  margin: 0 auto;
-  padding: 0; }
-
-#cssmenu > ul li#responsive-tab {
-  display: none;
-  /* Hide for large screens */ }
-
-#cssmenu > ul li {
-  display: inline-block;
-  margin-left: 50px; }
-
-#cssmenu > ul li.right {
-  float: right; }
-
-#cssmenu > ul li.has-sub {
-  position: relative; }
-
-#cssmenu > ul li.has-sub:hover ul {
-  display: block; }
-
-#cssmenu > ul li.has-sub ul {
-  display: none;
-  width: 250px;
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  background: #cedeea;
-  border: 1px solid #ece6e8;
-  border-bottom: 3px solid #d9ced2;
-  border-top: 0 none;
-  z-index: 10; }
-
-#cssmenu > ul li.has-sub ul li {
-  display: block; }
-
-#cssmenu > ul li.has-sub > a {
-  background-image: url("images/caret.png");
-  background-repeat: no-repeat;
-  background-position: 90% -95%; }
-
-#cssmenu > ul li.has-sub > a.activeSec,
-#cssmenu > ul li.has-sub > a:hover {
-  background: #cedeea url("images/caret.png") no-repeat;
-  background-position: 90% 195%; }
-
-#cssmenu > ul li a {
-  display: inline-block;
-  padding: 12px 24px 11px 24px;
-  text-decoration: none;
-  color: #075998; }
-
-#cssmenu > ul li a.activeSec,
-#cssmenu > ul li a:hover {
-  background: #aac8df;
-  color: #fff; }
-
-@media screen and (max-width: 960px) {
-  #cssmenu > ul li {
-    display: block;
-    margin-left: 28%; } }
-
-@media (max-width: 600px) {
-  #cssmenu > ul {
-    width: 100%; }
-  #cssmenu > ul li#responsive-tab {
-    display: block; } }
-
-.wrap_for_secondMenu {
-  width: 100%;
-  background-color: #fff;
-  padding: 20px;
-  text-align: center; }
-
-/* finish second menu*/
 .innerDescription {
   /*padding-left:50%;*/
   padding-top: 20px;
@@ -414,6 +296,13 @@ a {
   /*box-shadow: 0 0 0 3px white inset, 0 0 0 4px #ADD8E6 inset;*/ }
   .wrapForinnerFoto:hover {
     background-color: #E0FFFF; }
+.wrapForinnerFotoNoneLink {
+  text-align: center;
+  border: 3px double SkyBlue;
+  padding: 0;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0.4em 0.4em 5px rgba(122, 122, 122, 0.5);
+          box-shadow: 0.4em 0.4em 5px rgba(122, 122, 122, 0.5); }
 
 .wrapForinnerFotoRecommend {
   text-align: center;
@@ -452,13 +341,7 @@ mark {
 .sec {
   background-color: #4ebb40; }
 
-/*.wrapForinnerFoto{
-	width: 100%;
-	height: 200px;
-	background: url('../img/konstantin.jpg')no-repeat center;
-	-webkit-background-size: cover;
-	background-size: cover;
-}*/
+
 li {
   list-style-type: none;
   text-decoration: none; }
@@ -562,159 +445,6 @@ a {
     line-height: 1.1;
     font-size: 28px; } 	}
 
-table {
-  width: 100%;
-  border-collapse: collapse; }
-
-/* Черно-белые полоски */
-tr:nth-of-type(odd) {
-  background-color: #cbe2ed; }
-
-tr:nth-of-type(even) {
-  background-color: #cbe2ed; }
-
-th {
-  background-color: #086897;
-  color: white;
-  font-weight: bold; }
-
-td, th {
-  padding: 6px;
-  border: 1px solid #fff;
-  text-align: center; }
-
-.app {
-  background-color: RGB(49, 237, 225); }
-
-@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* Заставьте таблицу больше не вести себя как таблица */
-  table, thead, tbody, th, td, tr {
-    display: block; }
-  .app {
-    background-color: RGB(49, 237, 225); }
-  /* Скройте заголовки таблицы (но в целях доступности не с display: none;) */
-  thead tr {
-    position: absolute;
-    top: -9999px;
-    left: -9999px; }
-  tr {
-    border: 1px solid #fff; }
-  td {
-    /* Поведение как у «строки» */
-    border: none;
-    border-bottom: 1px solid #fff;
-    position: relative;
-    padding-left: 50%; }
-  td:before {
-    /* Теперь как у заголовка таблицы */
-    position: absolute;
-    /* Значения top/left имитируют отступ */
-    top: 6px;
-    left: 6px;
-    width: 45%;
-    padding-right: 10px; }
-  /*
-
-Пометьте данные
-
-*/
-  td:nth-of-type(1):before {
-    content: "Без посредников";
-    word-wrap: break-word;
-    text-transform: uppercase;
-    background-color: #086897;
-    color: #fff;
-    height: 53px;
-    top: 2px;
-    left: -3px;
-    padding-left: 20px;
-    padding-top: 12px;
-    font-size: 12px; }
-  td:nth-of-type(2):before {
-    content: "май";
-    background-color: #086897;
-    color: #fff;
-    height: 53px;
-    top: 2px;
-    left: -3px;
-    padding-left: 20px;
-    padding-top: 15px; }
-  td:nth-of-type(3):before {
-    content: "с 19.05";
-    background-color: #086897;
-    color: #fff;
-    height: 53px;
-    top: 2px;
-    left: -3px;
-    padding-left: 20px;
-    padding-top: 15px; }
-  td:nth-of-type(4):before {
-    content: "июнь";
-    background-color: #086897;
-    color: #fff;
-    height: 53px;
-    top: 2px;
-    left: -3px;
-    padding-left: 20px;
-    padding-top: 15px; }
-  td:nth-of-type(5):before {
-    content: "с 09.06 по 01.07";
-    background-color: #086897;
-    color: #fff;
-    height: 53px;
-    top: 2px;
-    left: -3px;
-    padding-left: 20px;
-    padding-top: 15px; }
-  td:nth-of-type(6):before {
-    content: "июль";
-    background-color: #086897;
-    color: #fff;
-    height: 53px;
-    top: 2px;
-    left: -3px;
-    padding-left: 20px;
-    padding-top: 15px; }
-  td:nth-of-type(7):before {
-    content: "август";
-    background-color: #086897;
-    color: #fff;
-    height: 53px;
-    top: 2px;
-    left: -3px;
-    padding-left: 20px;
-    padding-top: 15px; }
-  td:nth-of-type(8):before {
-    content: "сентябрь";
-    background-color: #086897;
-    color: #fff;
-    height: 53px;
-    top: 2px;
-    left: -3px;
-    padding-left: 20px;
-    padding-top: 15px; }
-  td:nth-of-type(9):before {
-    content: "c 11.09";
-    background-color: #086897;
-    color: #fff;
-    height: 53px;
-    top: 2px;
-    left: -3px;
-    padding-left: 20px;
-    padding-top: 15px; }
-  td:nth-of-type(10):before {
-    content: "октябрь";
-    background-color: #086897;
-    color: #fff;
-    height: 53px;
-    top: 2px;
-    left: -3px;
-    padding-left: 20px;
-    padding-top: 15px; }
-  tr:nth-of-type(even) {
-    background-color: #cbe2ed; }
-  tr:nth-of-type(odd) {
-    background-color: #cbe2ed; } }
 
 /*button start*/
 .for_button {
@@ -818,13 +548,4 @@ td, th {
 .blue1 {
   color: white; }
 
-/*@media screen and (max-width: 500px){
-.footer2{
-display: none;
-}
-}
-@media screen and (min-width: 500px){
-.footer1{
-display: none;
-}
-}*/
+
