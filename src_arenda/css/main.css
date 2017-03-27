@@ -3,7 +3,7 @@
   font-size: ($sizeValue * 10) + px;
   font-size: $sizeValue + rem;
 }*/
-/**/
+/*подключение @include font-size(48px);используем*/
 /*rgb(0, 102, 102);*/
 /*$colorNav:rgba(179, 255, 218, .7);*/
 /*rgba(0, 102, 102, .5);*/
@@ -170,7 +170,14 @@ p{
   background-color: rgba(0, 87, 128, 0.7); }
 
 @media only screen and (max-width: 500px) {
-  
+  /*.main-nav{
+		display: none;
+	}
+	.cross{
+		display: block;
+		top:100px;
+		left: 45%;
+	}*/
   .main-a {
     /*font-size: 18px;*/
     font-size: 18px;
@@ -276,8 +283,119 @@ a {
   .top-logo {
     float: none; } }
 
+/*@media screen and (max-width: 985px){
+.for_logo_tel{
+	text-align: left;
+}
+.addr{
+	margin-top: -50px;
+}
+
+}
+
+@media screen and (max-width: 769px){
+	.addr{
+	margin-top:10px;
+}
+.for_logo_tel{
+	text-align: center;
+}
 
 
+}*/
+/* start second menu*/
+#cssmenu {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  font-size: 14px;
+  line-height: 15px;
+  text-transform: uppercase;
+  text-align: left; }
+
+#cssmenu > ul {
+  width: 80%;
+  list-style-type: none;
+  padding: 30px 0;
+  margin: 0;
+  background: #e1eaf1;
+  border: 1px solid #ece6e8;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  /* закругление углов для всех, кто понимает */
+  margin: 0 auto;
+  padding: 0; }
+
+#cssmenu > ul li#responsive-tab {
+  display: none;
+  /* Hide for large screens */ }
+
+#cssmenu > ul li {
+  display: inline-block;
+  margin-left: 50px; }
+
+#cssmenu > ul li.right {
+  float: right; }
+
+#cssmenu > ul li.has-sub {
+  position: relative; }
+
+#cssmenu > ul li.has-sub:hover ul {
+  display: block; }
+
+#cssmenu > ul li.has-sub ul {
+  display: none;
+  width: 250px;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background: #cedeea;
+  border: 1px solid #ece6e8;
+  border-bottom: 3px solid #d9ced2;
+  border-top: 0 none;
+  z-index: 10; }
+
+#cssmenu > ul li.has-sub ul li {
+  display: block; }
+
+#cssmenu > ul li.has-sub > a {
+  background-image: url("images/caret.png");
+  background-repeat: no-repeat;
+  background-position: 90% -95%; }
+
+#cssmenu > ul li.has-sub > a.activeSec,
+#cssmenu > ul li.has-sub > a:hover {
+  background: #cedeea url("images/caret.png") no-repeat;
+  background-position: 90% 195%; }
+
+#cssmenu > ul li a {
+  display: inline-block;
+  padding: 12px 24px 11px 24px;
+  text-decoration: none;
+  color: #075998; }
+
+#cssmenu > ul li a.activeSec,
+#cssmenu > ul li a:hover {
+  background: #aac8df;
+  color: #fff; }
+
+@media screen and (max-width: 960px) {
+  #cssmenu > ul li {
+    display: block;
+    margin-left: 28%; } }
+
+@media (max-width: 600px) {
+  #cssmenu > ul {
+    width: 100%; }
+  #cssmenu > ul li#responsive-tab {
+    display: block; } }
+
+.wrap_for_secondMenu {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center; }
+
+/* finish second menu*/
 .innerDescription {
   /*padding-left:50%;*/
   padding-top: 20px;
@@ -296,6 +414,7 @@ a {
   /*box-shadow: 0 0 0 3px white inset, 0 0 0 4px #ADD8E6 inset;*/ }
   .wrapForinnerFoto:hover {
     background-color: #E0FFFF; }
+
 .wrapForinnerFotoNoneLink {
   text-align: center;
   border: 3px double SkyBlue;
@@ -341,7 +460,13 @@ mark {
 .sec {
   background-color: #4ebb40; }
 
-
+/*.wrapForinnerFoto{
+	width: 100%;
+	height: 200px;
+	background: url('../img/konstantin.jpg')no-repeat center;
+	-webkit-background-size: cover;
+	background-size: cover;
+}*/
 li {
   list-style-type: none;
   text-decoration: none; }
@@ -357,13 +482,12 @@ li {
   display: inline-block;
   background-color: #086897;
   color: #fff;
-  width: 100%; 
+  width: 100%;
   margin-top: -3px; }
 
 .descr {
-  border: 1px solid #086897; 
-   margin: -8px 0; }
-
+  border: 1px solid #086897;
+  margin: -8px 0; }
 
 .aboutShip {
   margin-bottom: 10px; }
@@ -441,9 +565,9 @@ a {
   .fix {
     width: 187px;
     height: 169px; }
- .mainDescr {
+  .mainDescr {
     line-height: 1.1;
-    font-size: 28px; } 	}
+    font-size: 28px; } }
 
 
 /*button start*/
