@@ -12,6 +12,30 @@ body, html, td {
   margin-left: auto;
   border-collapse: collapse; }
 
+.wrapForTop {
+  width: 100%;
+  background-color: #086897;
+  text-align: center;
+  height: 80px;
+  margin-left: 15px; }
+
+.wrapForTopImg {
+  display: inline-block; }
+
+.personDisk {
+  display: block;
+  color: #fff; }
+
+.wrapForTop2 {
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid #FF9900;
+  font-family: verdana,geneva,sans-serif;
+  /* border-color: #FF9900;*/
+  text-align: center;
+  margin-top: 0px;
+  margin-left: -15px; }
+
 hr {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -163,8 +187,6 @@ hr {
     text-align: center; } }
 
 @media only screen and (max-width: 500px) {
-	body, html, td {
-	font-size: 16px; }
   .dop-menu {
     /*border-left: 5px solid #bbdbf2;
     width: 30%;
@@ -178,3 +200,9 @@ hr {
       width: 3px;
       height: 100%;
       background-color: skyblue; } }
+
+@media only screen and (max-width: 1100px) {
+  .wrapForTop {
+    margin-left: 0; }
+  .wrapForTop2 {
+    margin-left: 0; } }
