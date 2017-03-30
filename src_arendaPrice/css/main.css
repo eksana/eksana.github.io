@@ -163,6 +163,9 @@ hr {
     text-align: center; } }
 
 @media only screen and (max-width: 500px) {
+	body, html, td {
+ 
+  font-size: 16px; }
   .dop-menu {
     /*border-left: 5px solid #bbdbf2;
     width: 30%;
