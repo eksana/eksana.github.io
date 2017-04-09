@@ -602,7 +602,9 @@ input[type="tel"] {
     margin-right: 0; }
   input[type="submit"] {
     margin-left: 0;
-    padding: 0; }
+    padding: 0;
+	width: 80%;
+    font-size: 12px;}
   .for_tel, .for_submit {
     margin-bottom: 8px; } }
 
