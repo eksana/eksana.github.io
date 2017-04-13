@@ -1,0 +1,435 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from captcha24.com/api by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Apr 2017 06:37:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<title>Сервис ручного распознавания капч и сканированных изображений.  Антикапча. OCR-online</title>
+<meta name="description" content="Капча24 - сервис по дешефрации изображений с капчей и любых других изображений с текстом. У нас вы можете заработать, вводя текст с изображений, либо можете присылать капчи по API на распознание." />
+<meta name="keywords" content="капчи, распознование капчи, заработок на капчах, API капчи, антикапча, OCR online" />
+<meta name="google-site-verification" content="M5o_5pEovoQvIu7oyG3xTEyiUgMblspFpN4yWPK8dFs" />
+<!--<link rel="stylesheet" type="text/css" href="style/css/style.css" />-->
+<link rel="stylesheet" type="text/css" href="style/css/style.css" />
+<script type="text/javascript" src="style/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="style/js/style.js"></script>
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="style/css/ie-fix.css">
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="style/css/ie-fix7.css">
+<![endif]-->       
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        
+</head>
+<body>
+    <header>
+        <div class="top_header" style="border-bottom: 2px solid #ffd97e; box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);"> 
+            <div class="wrap">
+                <a class="logo" href="index.html"><img src="style/img/logo.png" style="margin-top: -20px;" /></a>
+                <div class="useru">
+                    <input type="button" class="enter" value="Вход" onclick="window.location.href='auth.html'">
+                    <input type="button" class="rega" value="Регистрация" onclick="window.location.href='auth/register.html'" style="width: 165px; margin: 0;">                
+                </div>            
+                <ul class="menu" style="padding-right: 40px;">
+                    <li><a href="about.html">О проекте</a></li>
+                    <li><a href="job.html">Заработок</a></li>
+                    <li><a href="api.html">&nbsp; &nbsp; API &nbsp; &nbsp;</a></li>
+                    <li style="padding: 0 30px;"></li>
+                                 
+                </ul>                      
+            </div>
+        </div>
+    </header>
+    <link href="template/main/css/api.css" rel="stylesheet">
+
+<div id="content" style="background: url('style/img/fon_skew_sh.png') repeat;">
+        <div class="fon_header" style="height: 127px; background-position: 0 0;"></div>
+<div class="wrap" style="padding: 40px 0 15px 0;">
+	<br>
+	<h1 style="color: black;"> API captcha24</h1>
+	<br>
+	<br>
+	<br>
+	<strong>Важно: API captcha24 полностью соответствует  API аналогичных систем (antigate, pixodrom и другие), но при этом содержит дополнительные методы, не конфликтующие с существующим стандартом.</strong>
+	<br><br>
+
+<strong>language</strong> - однозначно заявляет о языке изображения. Если работник расшифровывает изображение в неверной раскладке, он получает предупреждение о неверном вводе. Помимо этого работнику указывается язык рядом с изображением.<br>
+<strong>numeric</strong> - помимо существующих значений: не задано \ только цифры, добавлено новое значение: "либо только цифры, либо только буквы"<br>
+
+	<br>
+<p>Сервис captcha24 позволяет присылать каптчи и получать их расшифровку в автоматизированном режиме. Для этого понадобится получить api-key в настройках и реализовать следующий алгоритм:</p>
+
+<p>1. Прислать картинку на сервер captcha24.com<br />
+2. Получить ID присланной картинки<br />
+3. Запустить цикл, который будет проверять поступление расшифровки<br />
+4. Если ответ верный - завершить транзакцию<br />
+5. Если ответ не верный - отправить уведомление о неверной расшифровке и завершить транзакцию</p>
+
+<h2>Загрузка каптчи</h2>
+
+<p>Загрузка каптчи возможна в двух форматах:</p>
+
+<p>multipart и base64</p>
+
+<h4>Пример загрузки в формате multipart:</h4>
+
+<p>&lt;form method=&quot;post&quot; action=&quot;http://captcha24.com/in.php&quot; enctype=&quot;multipart/form-data&quot;&gt;<br />
+&lt;input type=&quot;hidden&quot; name=&quot;method&quot; value=&quot;post&quot;&gt;<br />
+<em>Ключ от учетной записи:</em><br />
+&lt;input type=&quot;text&quot; name=&quot;key&quot; value=&quot;YOUR_APIKEY&quot;&gt;<br />
+<em>Файл каптчи:</em><br />
+&lt;input type=&quot;file&quot; name=&quot;file&quot;&gt;<br />
+&lt;input type=&quot;submit&quot; value=&quot;загрузить и получить ID&quot;&gt;<br />
+&lt;/form&gt;</p>
+
+<p>&nbsp;</p>
+
+	<p><b>YOUR_APIKEY</b> - Ваш key, длиной 32 символа</p>
+
+<h3>Пример загрузки каптчи в формате base64:</h3>
+
+<p>&lt;form method=&quot;post&quot; action=&quot;http://captcha24.com/in.php&quot;&gt;<br />
+&lt;input type=&quot;hidden&quot; name=&quot;method&quot; value=&quot;base64&quot;&gt;<br />
+<em>Ключ от учетной записи:</em><br />
+&lt;input type=&quot;text&quot; name=&quot;key&quot; value=&quot;YOUR_APIKEY&quot;&gt;<br />
+<em>Тело файла каптчи закодированное в base64:</em><br />
+&lt;textarea name=&quot;body&quot;&gt;BASE64_FILE&lt;/textarea&gt;<br />
+&lt;input type=&quot;submit&quot; value=&quot;загрузить и получить ID&quot;&gt;<br />
+&lt;/form&gt;</p>
+
+	<p><b>YOUR_APIKEY</b> - Ваш key, длиной 32 символа</p>
+
+	<p><b>BASE64_FILE</b> - Тело файла закодированное в base64. Не забудьте дополнительно закодировать тело в UUEncode, иначе тело каптчи придет битым.</p>
+
+<p><br />
+	<h3>Дополнительные параметры загрузки каптчи</h3><br />
+<br />
+&nbsp;</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:900px">
+	<thead>
+		<tr>
+			<th scope="col">POST параметр</th>
+			<th scope="col">возможные значения</th>
+			<th scope="col">описание параметра</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>phrase</td>
+			<td>0;1</td>
+			<td><strong>0</strong> = одно слово (значение по умолчанию)<br />
+			<strong>1</strong> = каптча имеет два слова</td>
+		</tr>
+		<tr>
+			<td>regsense</td>
+			<td>0;1</td>
+			<td><strong>0</strong> = регистр ответа не имеет значения (значение по умолчанию )<br />
+			<strong>1</strong> = регистр ответа имеет значение</td>
+		</tr>
+		<tr>
+			<td>numeric</td>
+			<td>0;1</td>
+			<td>
+			<p><strong>0</strong> = параметр не задействован (значение по умолчанию)<br />
+			<strong>1</strong> = каптча состоит только из цифр<br />
+			</td>
+		</tr>
+		<tr>
+			<td>calc</td>
+			<td>0;1</td>
+			<td><strong>0</strong> = параметр не задействован (значение по умолчанию)<br />
+			<strong>1</strong> = работнику нужно совершить математическое действие с каптчи</td>
+		</tr>
+		<tr>
+			<td>min_len</td>
+			<td>0..20</td>
+			<td>
+			<p><strong>0</strong> = параметр не задействован (значение по умолчанию)<br />
+			<strong>1..20 </strong>= минимальное количество знаков в ответе</p>
+			</td>
+		</tr>
+		<tr>
+			<td>max_len</td>
+			<td>1..20</td>
+			<td><strong>0</strong> = параметр не задействован (значение по умолчанию)<br />
+			<strong>1..20 </strong>= максимальное количество знаков в ответе</td>
+		</tr>
+		<tr>
+			<td>is_russian</td>
+			<td>0;1</td>
+			<td>
+			<p>параметр больше не используется, т.к. он означал "отправлять текущую каптчу русским исполнителям", а в системе находятся только русскоязычные исполнители. 
+            Смотрите новый параметр language, однозначно обозначающий язык каптчи</p>
+			</td>
+		</tr>
+		<tr>
+			<td>soft_id</td>
+			<td>&nbsp;</td>
+			<td>ID разработчика приложения. Разработчику приложения отчисляется 10% от всех каптч, пришедших из его приложения.</td>
+		</tr>
+		<tr>
+			<td>language</td>
+			<td>0;1</td>
+			<td>
+			<strong>0</strong> = параметр не задействован (значение по умолчанию)<br />
+			<strong>1</strong> = на каптче только кириллические буквы<br />
+			</td>
+		</tr>
+		<tr>
+			<td>header_acao</td>
+			<td>0;1</td>
+			<td><strong>0</strong> = значение по умолчанию<br />
+			<strong>1</strong> = in.php передаст Access-Control-Allow-Origin: * параметр в заголовке ответа. 
+            Необходимо, для кросс-доменных AJAX запросов в браузерных приложениях. Работает также для res.php.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Ответы сервера на загрузку каптчи:</h2>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:900px">
+	<thead>
+		<tr>
+			<th scope="col">Ответ сервера</th>
+			<th scope="col">Статус</th>
+			<th scope="col">Расшифровка</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>OK|%CAPTCHA_ID%</td>
+			<td>&nbsp;принято</td>
+			<td>Каптча добавлена в очередь на расшифровку.<br />
+			%CAPTCHA_ID% - ID каптчи, который Вам понадобится при запросе статуса расшифровки каптчи</td>
+		</tr>
+		<tr>
+			<td>ERROR_WRONG_USER_KEY</td>
+			<td>отказано</td>
+			<td>Неверный формат параметра key, должно быть 32 символа</td>
+		</tr>
+		<tr>
+			<td>ERROR_KEY_DOES_NOT_EXIST</td>
+			<td>отказано</td>
+			<td>Использован несуществующий key</td>
+		</tr>
+		<tr>
+			<td>ERROR_ZERO_BALANCE</td>
+			<td>отказано</td>
+			<td>Баланс Вашего аккаунта нулевой</td>
+		</tr>
+		<tr>
+			<td>ERROR_NO_SLOT_AVAILABLE</td>
+			<td>отказано</td>
+			<td>Нет свободных работников.</td>
+		</tr>
+		<tr>
+			<td>ERROR_ZERO_CAPTCHA_FILESIZE</td>
+			<td>отказано</td>
+			<td>Размер каптчи меньше 100 Байт</td>
+		</tr>
+		<tr>
+			<td>ERROR_TOO_BIG_CAPTCHA_FILESIZE</td>
+			<td>отказано</td>
+			<td>Размер каптчи более 100 КБайт</td>
+		</tr>
+		<tr>
+			<td>ERROR_WRONG_FILE_EXTENSION</td>
+			<td>отказано</td>
+			<td>Ваша каптча имеет неверное расширение, допустимые расширения jpg,jpeg,gif,png</td>
+		</tr>
+		<tr>
+			<td>ERROR_IMAGE_TYPE_NOT_SUPPORTED</td>
+			<td>отказано</td>
+			<td>Сервер не может определить тип файла каптчи</td>
+		</tr>
+		<tr>
+			<td>ERROR_IP_NOT_ALLOWED</td>
+			<td>отказано</td>
+			<td>В Вашем аккаунте настроено ограничения по IP с которых можно делать запросы. И IP, с которого пришёл данный запрос не входит в список разрешённых.</td>
+		</tr>
+		<tr>
+			<td>IP_BANNED</td>
+			<td>отказано</td>
+			<td>IP-адрес, с которого пришёл запрос, заблокирован из-за частых обращений с различными неверными ключами. 
+            Блокировка снимается по письму на support@captcha24.com</td>
+		</tr>
+	</tbody>
+</table>
+
+
+<h2>Получение результата расшифровки каптчи:</h2>
+
+<p>Делается GET запросом вида:</p>
+
+<p>http://captcha24.com/res.php?key=YOUR_APIKEY&amp;action=get&amp;id=CAPCHA_ID</p>
+
+<p>YOUR_APIKEY - Ваш key, длиной 32 символа<br />
+CAPTCHA_ID - ID ранее загруженной каптчи</p>
+
+<p>Ответы сервера:</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:900px">
+	<tbody>
+		<tr>
+			<td>Ответ сервера на запрос статуса</td>
+			<td>Статус</td>
+			<td>расшифровка</td>
+		</tr>
+		<tr>
+			<td>OK|%TEXT%</td>
+			<td>готово</td>
+			<td>Каптча успешно расшифрована<br />
+			%TEXT% - расшифрованный текст</td>
+		</tr>
+		<tr>
+			<td>CAPCHA_NOT_READY</td>
+			<td>ещё не готово</td>
+			<td>Каптча, ещё не расшифрована, необходимо повторить запрос через несколько секунд</td>
+		</tr>
+		<tr>
+			<td>ERROR_KEY_DOES_NOT_EXIST</td>
+			<td>ошибка</td>
+			<td>Вы использовали неверный key в запросе</td>
+		</tr>
+		<tr>
+			<td>ERROR_WRONG_ID_FORMAT</td>
+			<td>ошибка</td>
+			<td>Неверный формат ID каптчи. ID должен содержать только цифры</td>
+		</tr>
+		<tr>
+			<td>ERROR_CAPTCHA_UNSOLVABLE</td>
+			<td>ошибка</td>
+			<td>Каптчу не смогли разгадать 3 разных работника. Средства за эту каптчу не списываются</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<h2>Дополнительные возможности API</h2>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:900px">
+	<thead>
+		<tr>
+			<th scope="col">Запрос</th>
+			<th scope="col">Варианты ответа</th>
+			<th scope="col">Расшифровка</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>action=get&amp;ids=CAPTCHA_ID_1,CAPTCHA_ID_2,...,CAPTCHA_ID_N<br />
+			&nbsp;</td>
+			<td>%TEXT_1%|%TEXT_2%...%TEXT_N%</td>
+			<td>Запрос статуса сразу нескольких каптч. Распознанный текст либо код CAPCHA_NOT_READY будут в этом случае разделены знаком &quot;|&quot;</td>
+		</tr>
+		<tr>
+			<td>action=get2&amp;id=CAPCHA_ID<br />
+			&nbsp;</td>
+			<td>%OK%|%TEXT%|%COST%</td>
+			<td>Запрос статуса и стоимости распознавания данной каптчи. </td>
+		</tr>
+		<tr>
+			<td>action=reportbad&amp;id=CAPCHA_ID</td>
+			<td>OK_REPORT_RECORDED</td>
+			<td>Пожаловаться на неправильно расшифрованную каптчу</td>
+		</tr>
+		<tr>
+			<td>action=getbalance</td>
+			<td>%BALANCE%</td>
+			<td>Узнать баланс аккаунта.</td>
+		</tr>
+		<tr>
+			<td>action=getstats&amp;date=2013-11-27</td>
+			<td>%FILE.XML%</td>
+			<td>получить статистику использования аккаунта в XML за указанную дату</td>
+		</tr>
+			<tr>
+			<td>http://captcha24.com/load.php</td>
+			<td>  5 88.3 0.001 14.965648650099  </td>
+			<td>
+            waiting: количество работников ожидающих каптчу.<br>
+            load: процент загрузки работников<br>
+            minbid: текущая ставка за распознание каптчи.<br>
+            averageRecognitionTime: среднее время (в секундах) за которое в данный момент разгадываются каптчи</td>
+		</tr>
+	</tbody>
+</table>
+<br><br><br><br><br><br><br><br><br>
+	</div>
+</div>
+</div>
+	</div>     <footer id="footer">
+        <div class="wrap">
+            <div class="foot_left">
+                <ul class="foot_menu">
+                    <li><a href="about.html">О проекте</a></li>
+                    <li><a href="job.html">Заработок</a></li>
+                    <li><a href="api.html">API</a></li>
+                </ul>
+            </div>
+            <div class="foot_right">
+                <ul class="social">
+                    <li><a class="s1" href="http://vk.com/"></a></li>
+                    <li><a class="s2" href="https://www.facebook.com/"></a></li>
+                    <li><a class="s3" href="https://twitter.com/"></a></li>
+                </ul>
+                <ul class="" style="float:right; background: none; padding-top:10px;">
+                    <li style="float:left;"><!-- webmoney attestation l begin -->
+<a target="_blank" href="https://passport.webmoney.ru/asp/certview.asp?wmid=184332096327"><img border="0" alt="Здесь находится аттестат нашего WM идентификатора 000000000000" src="style/img/img_ban.png" /></a>
+<!-- webmoney attestation label# end --></li>
+                    <li style="float:left;"><!-- begin WebMoney Transfer : accept label -->
+<a target="_blank" href="http://www.megastock.ru/"><img border="0" alt="www.megastock.ru" src="style/img/img_ban.png" /></a>
+<!-- end WebMoney Transfer : accept label --></li>
+                </ul>
+            </div>
+            <div class="foot_centr">
+                <a class="logofoot" href="#"><img src="style/img/logo.png" /></a>
+                <p>Копирование всех составляющих 
+                частей сайта, в какой бы то ни было 
+                форме, без разрешения владельца 
+                авторских прав запрещено!</p>
+                <div class="contacts">info@captcha24.com<br> +3095 228-60-35 </div>
+            </div>    
+        </div>
+    </footer>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter25694777 = new Ya.Metrika({id:25694777,
+                    webvisor:true,
+                    clickmap:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="http://mc.yandex.ru/watch/25694777" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+
+<!-- Mirrored from captcha24.com/api by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Apr 2017 06:37:27 GMT -->
+</html>

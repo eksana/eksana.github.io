@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/MTP_ySUJH_bn48VBG8sNSoraN7vELC11_xip9Rz-hMs.woff) format('woff');
+}
+.wrapper.body { overflow:hidden;}
+.wrapper.body h1 {font-size:36px;font-family:'Open Sans', sans-serif;margin:0;padding-top:10px;float:left;width:100%;}
+.wrapper.body h2 {font-size:24px;font-family:'Open Sans', sans-serif;margin:10px 0;padding:0;float:left;width:100%;}
+.wrapper.body p {font-family:'Open Sans', sans-serif;font-size:14px;color:#677481;text-align:justify;float:left;width:100%;margin-bottom:10px;line-height:20px;}
+.wrapper.body p a {color:#3498db;text-decoration:underline;}
+.wrapper.body p b {color:#34495e;font-weight:bold;}
+.wrapper.body p span.example {display:block;width:98%;float:left;background:#ecf0f1;padding:10px;}
+.wrapper.body span.comment {color:#677481;font-family:'Open Sans', sans-serif;font-size:14px;text-decoration:underline;}
+.wrapper.body span.comment:hover {text-decoration:none;}
+.wrapper.body ul {display:block;float:left;width:880px;}
+.wrapper.body ul li {font-family:'Open Sans', sans-serif;font-size:14px;color:#677481;text-align:justify;width:880px;line-height:20px;float:left;display:list-item;margin-bottom:10px;}
+.wrapper.body ul li ul {width:855px;margin-top:10px}
+.wrapper.body ul li ul li {width:855px;display:list-item;margin-bottom:10px;}
+.wrapper.body ul li ul li:last-child {margin-bottom:0;}
+.wrapper.body ul.decimal li {list-style-type:decimal;}
+.wrapper.body ul.alpha li {list-style-type:lower-alpha;}
+.wrapper.body ul.dotted li { list-style-type:disc;}
+.wrapper.body ul.rounded li {list-style-type:circle;}
+.wrapper.body table { float:left;width:100%;display:block;margin-bottom:15px;}
+.wrapper.body table tr.title td, .wrapper.body table tr th {font-family:'Open Sans', sans-serif;background:#bdc3c7;border:1px #bdc3c7 solid;color:#ffffff;font-size:14px;padding:0 10px;line-height:30px;text-align:left;}
+.wrapper.body table tr.painted {background:#f5f9fa;}
+.wrapper.body table tr td {border:1px #bdc3c7 solid;padding:0 10px;min-width:135px;color:#677481;font-family:'Open Sans', sans-serif;font-size:14px;line-height:20px;vertical-align:top;}
+.wrapper.body table tr td b {color:#34495e;font-weight:bold;}
