@@ -1,0 +1,123 @@
+<manifest alg="2" build="11" opt="false" iceEnabled="true" iceMarkupVersion="2" exportTarget="other" resolutions="1x" timestamp="1492696850474">
+  <folder name="css">
+    <file name="site_global.css" crc="3896933895"/>
+    <file name="index.css" crc="4053745443" ref="index"/>
+  </folder>
+  <folder name="fonts">
+    <file name="ptsans-italic.woff" crc="217464924"/>
+    <file name="ptsans-italic.eot" crc="4274590502"/>
+    <file name="ptsans-italic.svg" crc="389122738"/>
+    <file name="ptsans-regular.woff" crc="4270833572"/>
+    <file name="ptsans-regular.eot" crc="4170626248"/>
+    <file name="ptsans-regular.svg" crc="3839953752"/>
+    <file name="ptsans-bold.woff" crc="528496638"/>
+    <file name="ptsans-bold.eot" crc="4020291281"/>
+    <file name="ptsans-bold.svg" crc="4096944842"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="3880902115" ref="index"/>
+    <file name="museutils.js" crc="521960461" ref="index"/>
+    <file name="jquery.scrolleffects.js" crc="4038615763" ref="index"/>
+    <file name="jquery.watch.js" crc="56779320" ref="index"/>
+    <file name="pie.js" crc="3827607177" ref="index"/>
+    <file name="jquery.musemenu.js" crc="397543671" ref="index"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="349594875" ref="index"/>
+    <file name="webpro.js" crc="220831917" ref="index"/>
+    <file name="musewpslideshow.js" crc="224651946" ref="index"/>
+    <file name="jquery.museoverlay.js" crc="276313855" ref="index"/>
+    <file name="touchswipe.js" crc="325405309" ref="index"/>
+    <file name="html5shiv.js" crc="4241844378" ref="index"/>
+  </folder>
+  <folder name="images">
+    <file name="logogreen.png" crc="104057740" ref="index"/>
+    <file name="bg.jpg" crc="89123976" ref="index"/>
+    <file name="box1.png" crc="4136433135" ref="index"/>
+    <file name="bg1.jpg" crc="265313589" ref="index"/>
+    <file name="box2.png" crc="391938648" ref="index"/>
+    <file name="text-box1.png" crc="132823294" ref="index"/>
+    <file name="text-box2.png" crc="4191908748" ref="index"/>
+    <file name="bg2.jpg" crc="214522842" ref="index"/>
+    <file name="line.png" crc="4228441290" ref="index"/>
+    <file name="bg3.jpg" crc="4255147450" ref="index"/>
+    <file name="cross-road-u251.png" crc="3911953250" ref="index"/>
+    <file name="bg4.jpg" crc="372202797" ref="index"/>
+    <file name="line2.png" crc="4283955982" ref="index"/>
+    <file name="right.png" crc="3822517454" ref="index"/>
+    <file name="bg15.jpg" crc="12049492" ref="index"/>
+    <file name="u384-grad.png" crc="131697895" ref="index"/>
+    <file name="u384-r-grad.png" crc="288100905" ref="index"/>
+    <file name="line-horizontal.png" crc="67559878" ref="index"/>
+    <file name="img1.jpg" crc="106517587" ref="index"/>
+    <file name="box3.png" crc="79928384" ref="index"/>
+    <file name="line3.png" crc="247016385" ref="index"/>
+    <file name="bg5.jpg" crc="3916511842" ref="index"/>
+    <file name="img2.jpg" crc="3910655961" ref="index"/>
+    <file name="bg6.jpg" crc="4029298186" ref="index"/>
+    <file name="bg7.jpg" crc="4061921499" ref="index"/>
+    <file name="box4.png" crc="4080103540" ref="index"/>
+    <file name="img3.jpg" crc="4139410073" ref="index"/>
+    <file name="bg9.jpg" crc="4119955832" ref="index"/>
+    <file name="1.png" crc="445538415" ref="index"/>
+    <file name="3.png" crc="322343285" ref="index"/>
+    <file name="2.png" crc="521389558" ref="index"/>
+    <file name="4.png" crc="3993147134" ref="index"/>
+    <file name="5.png" crc="320461488" ref="index"/>
+    <file name="7.png" crc="4178839711" ref="index"/>
+    <file name="6.png" crc="367548579" ref="index"/>
+    <file name="8.png" crc="453170178" ref="index"/>
+    <file name="9.png" crc="3893743375" ref="index"/>
+    <file name="10.png" crc="4010101630" ref="index"/>
+    <file name="11.png" crc="79882236" ref="index"/>
+    <file name="12.png" crc="214130161" ref="index"/>
+    <file name="13.png" crc="3869394255" ref="index"/>
+    <file name="14.png" crc="3909479505" ref="index"/>
+    <file name="15.png" crc="159500619" ref="index"/>
+    <file name="16.png" crc="4046806732" ref="index"/>
+    <file name="u1132-grad.png" crc="3903491996" ref="index"/>
+    <file name="u1132-r-grad.png" crc="351343141" ref="index"/>
+    <file name="img4.jpg" crc="343156353" ref="index"/>
+    <file name="box5.png" crc="179969886" ref="index"/>
+    <file name="bg10.jpg" crc="3964422951" ref="index"/>
+    <file name="line4.png" crc="3920063537" ref="index"/>
+    <file name="line5.png" crc="450188952" ref="index"/>
+    <file name="line6.png" crc="3830525075" ref="index"/>
+    <file name="line7.png" crc="3779314581" ref="index"/>
+    <file name="bg4-u1471-fr.jpg" crc="3870434647" ref="index"/>
+    <file name="line8.png" crc="4098716822" ref="index"/>
+    <file name="box6.png" crc="186685546" ref="index"/>
+    <file name="cybersant-investor.png" crc="318087793" ref="index"/>
+    <file name="right2.png" crc="31252773" ref="index"/>
+    <file name="u1666-grad.png" crc="4019684298" ref="index"/>
+    <file name="u1666-r-grad.png" crc="303113255" ref="index"/>
+    <file name="bg11.jpg" crc="4065103130" ref="index"/>
+    <file name="bg8.jpg" crc="4139843482" ref="index"/>
+    <file name="comma.png" crc="308424851" ref="index"/>
+    <file name="bg12.jpg" crc="493484351" ref="index"/>
+    <file name="bg14.jpg" crc="4142859493" ref="index"/>
+    <file name="box9.png" crc="439141840" ref="index"/>
+    <file name="comma2.png" crc="508804058" ref="index"/>
+    <file name="left-chevron.png" crc="3977379460" ref="index"/>
+    <file name="right-chevron.png" crc="426802583" ref="index"/>
+    <file name="for.jpg" crc="269123906" ref="index"/>
+    <file name="box7.png" crc="4028782123" ref="index"/>
+    <file name="for2.jpg" crc="4098214230" ref="index"/>
+    <file name="for3.jpg" crc="310081350" ref="index"/>
+    <file name="for4.jpg" crc="4181730813" ref="index"/>
+    <file name="for5.jpg" crc="265113035" ref="index"/>
+    <file name="bg13.jpg" crc="275260406" ref="index"/>
+    <file name="var1.jpg" crc="3967240436" ref="index"/>
+    <file name="var2.jpg" crc="13213920" ref="index"/>
+    <file name="var3.jpg" crc="171337011" ref="index"/>
+    <file name="var4.jpg" crc="3843233090" ref="index"/>
+    <file name="anatoly.jpg" crc="3928701736" ref="index"/>
+    <file name="denis.jpg" crc="29628756" ref="index"/>
+    <file name="nikita.png" crc="457787149" ref="index"/>
+    <file name="aleksey.jpg" crc="157409902" ref="index"/>
+    <file name="quality.png" crc="3779073111" ref="index"/>
+    <file name="green.png" crc="3810651368" ref="index"/>
+    <file name="bg16.jpg" crc="4242452421" ref="index"/>
+    <file name="line9.png" crc="4006766773" ref="index"/>
+    <file name="box8.png" crc="64511788" ref="index"/>
+  </folder>
+  <file name="index.html" crc="414464834" mt="1492696501067" redirect="true"/>
+</manifest>
