@@ -20,6 +20,8 @@ form#bf113_form {
     border-width: 2px;
     border-style: solid;
     border-color: #45D200;
+	padding:20px;
+	margin-bottom:70px;
 }
 #green {
     width: 110px;
@@ -28,7 +30,7 @@ form#bf113_form {
     -webkit-background-size: cover;
     background-size: cover;
     top: 10px;
-    left: 10px;
+    left: 3px;
     position: absolute;
 }
 
@@ -7443,7 +7445,7 @@ form#bf113_form {
 	position: relative;
 	margin-right: -10000px;
 	margin-top: 31px;
-	margin-left: 170px;
+	margin-left: 190px;
 }
 
 #u2310
