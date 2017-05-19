@@ -214,7 +214,7 @@ img {
 .container_for_scroll_Beauty {
   padding: 5px;
   border: #dbdbdb 1px solid;
-  width: 400px;
+  /*width: 400px;*/
   height: 300px;
   margin: 40px auto;
   overflow: hidden;
